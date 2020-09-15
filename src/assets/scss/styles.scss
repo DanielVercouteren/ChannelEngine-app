@@ -1,4 +1,8 @@
 @import './reset';
-h1 {
-  color: red;
-}
+@import "variables/colors";
+@import "variables/fonts";
+
+@import "base/breakpoint";
+@import "base/layout";
+
+@import "components/header";

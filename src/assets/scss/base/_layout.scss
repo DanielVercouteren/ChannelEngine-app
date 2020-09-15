@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  max-width: $layout-max-container-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+
+  @each $size, $value in $layout-grid-offset {
+    @include breakpoint($size) {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @each $size, $value in $layout-grid-gap {
+    @include breakpoint($size) {
+      margin-left: -#{$value / 2};
+      margin-right: -#{$value / 2};
+    }
+  }
+}
+
+@each $size, $value in $layout-breakpoints {
+  @include breakpoint(#{$size}) {
+    @for $i from 0 through $layout-grid-columns {
+      .col-#{$size}-#{$i} {
+        width: percentage($i / $layout-grid-columns);
+      }
+
+      .offset-#{$size}-#{$i} {
+        margin-left: percentage($i / $layout-grid-columns);
+      }
+    }
+  }
+}

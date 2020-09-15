@@ -1,0 +1,27 @@
+.header {
+
+}
+
+.header__logo {
+  height: 4rem;
+  margin: 1.5rem 0;
+}
+
+.header__links {
+  height: 4rem;
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.header__link {
+  color: $color-primary;
+  line-height: 4rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid transparent;
+  transition: ease-in-out .2s;
+
+  &:hover {
+    color: darken($color-primary, 10%);
+    border-bottom: 1px solid darken($color-primary, 10%);
+  }
+}
