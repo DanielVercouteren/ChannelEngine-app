@@ -5,7 +5,7 @@ export const getOrders = async () => {
   try {
     const res = await axios.get('https://api-dev.channelengine.net/api/v2/orders', {
       params: {
-        apikey: '541b989ef78ccb1bad630ea5b85c6ebff9ca3322'
+        apikey: process.env.CHANNEL_ENGINE_API_KEY
       }
     })
     return mapOrders(res.data.Content)

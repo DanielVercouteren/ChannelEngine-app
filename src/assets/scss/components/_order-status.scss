@@ -1,0 +1,22 @@
+.order-status {
+  border-radius: .3rem;
+  color: $color-black;
+}
+
+.order-status--success {
+  background-color: $color-success;
+}
+
+.order-status--error {
+  background-color: $color-danger;
+  color: $color-white;
+}
+
+.order-status--warning {
+  background-color: $color-warning;
+}
+
+.order-status--info {
+  background-color: $color-info;
+  color: $color-white;
+}
