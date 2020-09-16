@@ -1,52 +1,51 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function OrderStatus ({ status }) {
-  let title
-  let className
+  const [title, setTitle] = useState('')
+  const [className, setClassName] = useState('')
 
   useEffect(() => {
     switch (status) {
       case 'IN_PROGRESS':
       case 'IN_COMBI':
       case 'IN_BACKORDER':
-        title = "In progress"
-        className = "info"
+        setTitle("In progress")
+        setClassName("info")
         break;
       case 'SHIPPED':
-        title = "Shipped"
-        className = "success"
+        setTtitle("Shipped")
+        setClassName("success")
         break;
       case 'MANCO':
-        title = "Lost in transit"
-        className = "warning"
+        setTitle("Lost in transit")
+        setClassName("warning")
         break;
       case 'CANCELED':
-        title = "Canceled"
-        className = "error"
+        setTitle("Canceled")
+        setClassName("error")
         break;
       case 'CLOSED':
-        title = "Closed";
-        className = "error"
+        setTitle("Closed")
+        setClassName("error")
         break;
       case 'NEW':
-        title = "Open"
-        className = "info"
+        setTitle("Open")
+        setClassName("info")
         break;
       case 'RETURNED':
-        title = "Returned"
-        className = "success"
+        setTitle("Returned")
+        setClassName("success")
         break;
       case 'REQUIRES_CORRECTION':
-        title = "Requires correction"
-        className = "warning"
+        setTitle("Requires correction")
+        setClassName("warning")
         break;
     }
-  }, [status, title, className])
+  }, [status])
 
-  console.log('data::', className, title)
   return (
-    <div className={`order-status order-status--${className}`}>
+    <p className={`order-status order-status--${className}`}>
       {title}
-    </div>
+    </p>
   )
 }
