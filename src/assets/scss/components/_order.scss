@@ -8,6 +8,20 @@
   }
 }
 
+.order__link {
+  color: $color-primary;
+  text-align: right;
+
+  & svg {
+    max-width: 1rem;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-primary--active;
+  }
+}
+
 .order__icon {
   max-width: 1.2rem;
   position: absolute;

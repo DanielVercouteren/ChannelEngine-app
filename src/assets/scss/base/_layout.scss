@@ -30,6 +30,8 @@
     @for $i from 0 through $layout-grid-columns {
       .col-#{$size}-#{$i} {
         width: percentage($i / $layout-grid-columns);
+        padding-left: .6rem;
+        padding-right: .6rem;
       }
 
       .offset-#{$size}-#{$i} {

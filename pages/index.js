@@ -19,10 +19,13 @@ export default function Home({ orders }) {
   )
 }
 
-Home.getInitialProps = async () => {
-  const orders = await getOrders()
+export async function getStaticProps() {
+  const {orders, totalCount} = await getOrders()
 
   return {
-    orders: orders
+    props: {
+      orders: orders,
+      totalCount: totalCount
+    }
   }
 }

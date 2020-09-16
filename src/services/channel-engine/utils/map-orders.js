@@ -18,6 +18,7 @@ const mapOrder = (data) => {
     shippingCostsInclVat: mapCurrency(data.CurrencyCode, data.ShippingCostsInclVat),
     totalVat: mapCurrency(data.CurrencyCode, data.TotalVat),
     totalInclVat: mapCurrency(data.CurrencyCode, data.TotalInclVat),
+    channelOrderNo: data.ChannelOrderNo,
     // items: mapItems(data.Lines),
     phoneNumber: data.Phone,
     emailAddress: data.Email,
