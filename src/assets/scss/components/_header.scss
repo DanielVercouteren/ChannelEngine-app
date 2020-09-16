@@ -21,7 +21,7 @@
   transition: ease-in-out .2s;
 
   &:hover {
-    color: darken($color-primary, 10%);
-    border-bottom: 1px solid darken($color-primary, 10%);
+    color: $color-primary--active;
+    border-bottom: 1px solid $color-primary--active;
   }
 }

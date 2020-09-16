@@ -12,4 +12,11 @@
   max-width: 1.2rem;
   position: absolute;
   right: 0;
+
+  color: $color-primary;
+
+  &:hover,
+  &:active {
+    color: $color-primary--active;
+  }
 }
