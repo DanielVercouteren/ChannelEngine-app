@@ -1,0 +1,32 @@
+.filter {
+  display: block;
+
+  & + & {
+    margin-top: 2rem;
+  }
+}
+.filter__title {
+  color: $color-primary;
+  font-weight: bold;
+  border-bottom: 1px solid lighten($color-gray-light, 10%);
+}
+
+.filter__items {
+  padding: .8rem 0;
+}
+
+.filter__items--is-open {
+  display: block;
+}
+
+.filter__item {
+  list-style: none;
+
+  & + & {
+    margin-top: .4rem;
+  }
+}
+
+.filter__checkbox {
+  margin-right: .6rem;
+}

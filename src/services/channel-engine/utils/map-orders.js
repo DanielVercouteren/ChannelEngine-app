@@ -23,8 +23,13 @@ const mapOrder = (data) => {
     phoneNumber: data.Phone,
     emailAddress: data.Email,
     paymentMethod: data.PaymentMethod,
-    orderDate: data.OrderDate,
+    orderDate: convertDate(data.OrderDate),
     extraData: data.ExtraData
 
   }
+}
+
+const convertDate = (date) => {
+  const parseDate = new Date(date)
+  return `${parseDate.getDate()}-${parseDate.getMonth()}-${parseDate.getFullYear()}`
 }

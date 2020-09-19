@@ -6,15 +6,10 @@ import Address from "components/address";
 import Link from 'next/link'
 
 export default function Order({order, onClickIcon, isOpen}) {
-  const convertDate = (date) => {
-    const parseDate = new Date(date)
-    return `${parseDate.getDate()}-${parseDate.getMonth()}-${parseDate.getFullYear()}`
-  }
-
   return (
     <div className={`order ${isOpen ? 'order--is-open' : ''}`}>
       <div className="row">
-        <p className="col-xs-8 col-sm-5 order__name">{convertDate(order.orderDate)} | Order #{order.channelOrderNo}</p>
+        <p className="col-xs-8 col-sm-5 order__name">{order.orderDate} | Order #{order.channelOrderNo}</p>
         <div className='col-xs-6 col-sm-3'>
           <OrderStatus status={order.status} />
         </div>

@@ -1,0 +1,37 @@
+.aside {
+  position: absolute;
+  z-index: 1;
+  width: 25%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: white;
+  transform: translateX(100%);
+  transition: .2s ease-in-out;
+  padding: 1.8rem 2.4rem 1.2rem;
+}
+
+.aside--is-open {
+  transform: none;
+}
+
+.aside-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($color-gray-dark, .5);
+}
+
+.aside__close {
+  position: absolute;
+  top: 1rem;
+  right: 2.8rem;
+  cursor: pointer;
+  font-size: 3.2rem;
+}
+
+.aside__title {
+  margin-bottom: 1.8rem;
+}
