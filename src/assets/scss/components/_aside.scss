@@ -1,18 +1,31 @@
 .aside {
   position: absolute;
+  visibility: hidden;
   z-index: 1;
-  width: 25%;
+  width: 0;
   height: 100%;
   right: 0;
   top: 0;
   background-color: white;
   transform: translateX(100%);
   transition: .2s ease-in-out;
-  padding: 1.8rem 2.4rem 1.2rem;
+  padding: 1.8rem 0 1.2rem;
 }
 
 .aside--is-open {
+  visibility: visible;
   transform: none;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  width: 90%;
+
+  @include breakpoint(md) {
+    width: 45%;
+  }
+
+  @include breakpoint(lg) {
+    width: 25%;
+  }
 }
 
 .aside-background {

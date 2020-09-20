@@ -2,22 +2,19 @@ $layout-max-container-width: 100%;
 $layout-grid-columns: 12;
 
 $layout-breakpoints: (
-        xs: 0,
-        sm: 768px,
-        md: 1024px,
-        lg: 1440px
+        sm: 0,
+        md: 768px,
+        lg: 1024px
 );
 
 $layout-grid-gap: (
-        xs: 12px,
         sm: 12px,
         md: 12px,
         lg: 12px,
 );
 
 $layout-grid-offset: (
-        xs: 24px,
-        sm: 48px,
+        sm: 24px,
         md: 48px,
         lg: 64px,
 );

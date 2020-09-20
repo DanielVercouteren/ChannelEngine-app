@@ -6,10 +6,10 @@ export default function Header() {
     <div className="header">
       <div className="container">
         <div className="row">
-          <div className="col-xs-4">
+          <div className="col-sm-4">
             <img src='images/vercel.svg' alt='' className="header__logo" />
           </div>
-          <div className="offset-xs-4 col-xs-4">
+          <div className="offset-sm-4 col-sm-4">
             <div className="header__links">
               <Link href='index' as='/'>
                 <a className="header__link">My orders</a>

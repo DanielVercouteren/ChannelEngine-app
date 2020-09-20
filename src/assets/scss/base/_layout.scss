@@ -3,7 +3,6 @@
   max-width: $layout-max-container-width;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: #F1F1F1;
 
   @each $size, $value in $layout-grid-offset {
     @include breakpoint($size) {

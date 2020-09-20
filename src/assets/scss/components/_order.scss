@@ -22,10 +22,19 @@
   }
 }
 
+.order__name {
+  margin-bottom: 1.4rem;
+}
+
+.order__price {
+  text-align: right;
+}
+
 .order__icon {
   max-width: 1.2rem;
   position: absolute;
   right: 0;
+  cursor: pointer;
 
   color: $color-primary;
 
@@ -33,4 +42,9 @@
   &:active {
     color: $color-primary--active;
   }
+}
+
+.order__row {
+  align-items: center;
+  margin-bottom: 1.6rem;
 }
