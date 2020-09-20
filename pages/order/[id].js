@@ -4,6 +4,7 @@ import Header from "components/header"
 import { getOrderById } from 'services/channel-engine'
 
 export default function Order({ order }) {
+  console.log(order)
   return (
     <div >
       <Head>
@@ -12,6 +13,7 @@ export default function Order({ order }) {
       </Head>
       <Header />
       <Layout>
+        <h1>{order.channelOrderNo}</h1>
 
       </Layout>
     </div>

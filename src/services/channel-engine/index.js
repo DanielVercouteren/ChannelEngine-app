@@ -24,7 +24,6 @@ export const getOrderById = async (id) => {
         channelOrderNos: id
       }
     })
-    console.log(res.data.Content)
     return mapOrders(res.data.Content)[0]
   } catch (err) {
     console.log(err.response)

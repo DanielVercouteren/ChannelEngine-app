@@ -1,5 +1,7 @@
 import {mapCurrency} from "./map-currency";
 import {mapAddress} from "./map-address";
+import {mapItems} from "./map-items";
+import {mapDate} from "./map-date";
 
 export const mapOrders = (data) => {
   if (!data) return null
@@ -12,24 +14,18 @@ const mapOrder = (data) => {
     status: data.Status,
     billingAddress: mapAddress(data.BillingAddress),
     shippingAddress: mapAddress(data.ShippingAddress),
-    subtotalVat: mapCurrency(data.CurrencyCode, data.SubTotalVat),
-    subtotalInclVat: mapCurrency(data.CurrencyCode, data.SubTotalInclVat),
-    shippingCostsVat: mapCurrency(data.CurrencyCode, data.ShippingCostsVat),
-    shippingCostsInclVat: mapCurrency(data.CurrencyCode, data.ShippingCostsInclVat),
-    totalVat: mapCurrency(data.CurrencyCode, data.TotalVat),
-    totalInclVat: mapCurrency(data.CurrencyCode, data.TotalInclVat),
+    subtotalVat: mapCurrency(data.SubTotalVat, data.CurrencyCode),
+    subtotalInclVat: mapCurrency(data.SubTotalInclVat, data.CurrencyCode),
+    shippingCostsVat: mapCurrency(data.ShippingCostsVat, data.CurrencyCode),
+    shippingCostsInclVat: mapCurrency(data.ShippingCostsInclVat, data.CurrencyCode),
+    totalVat: mapCurrency(data.TotalVat, data.CurrencyCode),
+    totalInclVat: mapCurrency(data.TotalInclVat, data.CurrencyCode),
     channelOrderNo: data.ChannelOrderNo,
-    // items: mapItems(data.Lines),
+    items: mapItems(data.Lines),
     phoneNumber: data.Phone,
     emailAddress: data.Email,
     paymentMethod: data.PaymentMethod,
-    orderDate: convertDate(data.OrderDate),
+    orderDate: mapDate(data.OrderDate),
     extraData: data.ExtraData
-
   }
-}
-
-const convertDate = (date) => {
-  const parseDate = new Date(date)
-  return `${parseDate.getDate()}-${parseDate.getMonth()}-${parseDate.getFullYear()}`
 }
