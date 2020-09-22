@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Order({order, onClickIcon, isOpen}) {
   return (
-    <div className={`order ${isOpen ? 'order--is-open' : ''}`}>
+    <div className={`order ${isOpen ? 'order--is-open' : ''}`} onClick={onClickIcon}>
       <div className="row order__row">
         <p className="col-sm-12 col-md-8 col-lg-5 order__name">{order.orderDate} | Order #{order.channelOrderNo}</p>
         <div className='col-sm-6 col-lg-3'>
@@ -21,7 +21,6 @@ export default function Order({order, onClickIcon, isOpen}) {
         <FontAwesomeIcon
           icon={isOpen ? faCaretUp : faCaretDown}
           className="order__icon"
-          onClick={onClickIcon}
         />
       </div>
       {isOpen && (

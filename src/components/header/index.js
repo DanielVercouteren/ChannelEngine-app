@@ -11,7 +11,7 @@ export default function Header() {
           </div>
           <div className="offset-sm-4 col-sm-4">
             <div className="header__links">
-              <Link href='index' as='/'>
+              <Link href='/' as='/'>
                 <a className="header__link">My orders</a>
               </Link>
             </div>
